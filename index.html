@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TasteBurst - Colorful Dining Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white font-bold text-xl">TB</div>
+                    <span class="font-semibold text-gray-900 text-xl">TasteBurst</span>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                        <svg class="w-6 h-6 text-gray-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-10">
+                    <a href="#home" class="text-gray-800 hover:text-red-500 transition">Home</a>
+                    <a href="#menu" class="text-gray-800 hover:text-red-500 transition">Menu</a>
+                    <a href="#about" class="text-gray-800 hover:text-red-500 transition">About</a>
+                    <a href="#gallery" class="text-gray-800 hover:text-red-500 transition">Gallery</a>
+                    <a href="#contact" class="text-gray-800 hover:text-red-500 transition">Contact</a>
+                    <button class="px-6 py-2 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-full hover:shadow-lg transition">Reservations</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="hidden mobile-menu md:hidden bg-white">
+            <div class="px-2 pt-2 pb-4 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-800 hover:bg-gray-100 rounded-md">Home</a>
+                <a href="#menu" class="block px-3 py-2 text-gray-800 hover:bg-gray-100 rounded-md">Menu</a>
+                <a href="#about" class="block px-3 py-2 text-gray-800 hover:bg-gray-100 rounded-md">About</a>
+                <a href="#gallery" class="block px-3 py-2 text-gray-800 hover:bg-gray-100 rounded-md">Gallery</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-800 hover:bg-gray-100 rounded-md">Contact</a>
+                <button class="w-full px-3 py-2 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-md">Reservations</button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-white py-20 md:py-32">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Experience Culinary Magic</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Where every dish tells a story and every bite takes you on a journey</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="px-8 py-3 bg-red-500 hover:bg-red-600 rounded-full font-semibold transition">Our Menu</button>
+                <button class="px-8 py-3 bg-white text-gray-800 hover:bg-gray-100 rounded-full font-semibold transition">Book a Table</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Special Offers -->
+    <section class="py-16 bg-gradient-to-r from-purple-100 to-pink-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Today's Specials</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Food Card 1 -->
+                <div class="food-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="relative h-60 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" 
+                             alt="Avocado Toast" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">-20%</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Rainbow Salad Bowl</h3>
+                            <span class="text-lg font-bold text-red-500">₹780</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Fresh vegetables with quinoa, avocado and our special dressing</p>
+                        <button class="w-full py-2 bg-gradient-to-r from-purple-400 to-pink-400 text-white rounded-full hover:shadow-md transition">Add to Order</button>
+                    </div>
+                </div>
+                
+                <!-- Food Card 2 -->
+                <div class="food-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="relative h-60 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1081&q=80" 
+                             alt="Pizza" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">New</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Truffle Mushroom Pizza</h3>
+                            <span class="text-lg font-bold text-gray-800">₹999</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Wood-fired pizza with wild mushrooms, truffle oil and mozzarella</p>
+                        <button class="w-full py-2 bg-gradient-to-r from-purple-400 to-pink-400 text-white rounded-full hover:shadow-md transition">Add to Order</button>
+                    </div>
+                </div>
+                
+                <!-- Food Card 3 -->
+                <div class="food-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="relative h-60 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1098&q=80" 
+                             alt="Burger" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Popular</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Gourmet Burger</h3>
+                            <span class="text-lg font-bold text-gray-800">₹890</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Angus beef patty with cheddar, caramelized onions and special sauce</p>
+                        <button class="w-full py-2 bg-gradient-to-r from-purple-400 to-pink-400 text-white rounded-full hover:shadow-md transition">Add to Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Menu Section -->
+    <section id="menu" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Menu</h2>
+            
+            <!-- Menu Categories -->
+            <div class="flex overflow-x-auto pb-4 mb-8 hide-scrollbar">
+                <div class="flex space-x-2">
+                    <button class="menu-category px-6 py-2 rounded-full border border-gray-200 hover:bg-red-500 hover:text-white transition whitespace-nowrap">All Items</button>
+                    <button class="menu-category px-6 py-2 rounded-full border border-gray-200 hover:bg-red-500 hover:text-white transition whitespace-nowrap">Starters</button>
+                    <button class="menu-category px-6 py-2 rounded-full border border-gray-200 hover:bg-red-500 hover:text-white transition whitespace-nowrap active">Main Courses</button>
+                    <button class="menu-category px-6 py-2 rounded-full border border-gray-200 hover:bg-red-500 hover:text-white transition whitespace-nowrap">Desserts</button>
+                    <button class="menu-category px-6 py-2 rounded-full border border-gray-200 hover:bg-red-500 hover:text-white transition whitespace-nowrap">Drinks</button>
+                    <button class="menu-category px-6 py-2 rounded-full border border-gray-200 hover:bg-red-500 hover:text-white transition whitespace-nowrap">Specials</button>
+                </div>
+            </div>
+            
+            <!-- Menu Items -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Dish 1 -->
+                <div class="dish-card bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="flex">
+                        <div class="w-24 h-24 rounded-lg overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" 
+                                 alt="Steak" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start">
+                                <h3 class="font-bold text-lg text-gray-800">Ribeye Steak</h3>
+                                <span class="font-bold text-red-500">₹1500</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mt-1">12oz grass-fed ribeye with roasted vegetables and red wine reduction</p>
+                            <div class="mt-2 flex items-center">
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="text-gray-500 text-xs ml-2">(48 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dish 2 -->
+                <div class="dish-card bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="flex">
+                        <div class="w-24 h-24 rounded-lg overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1071&q=80" 
+                                 alt="Pasta" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start">
+                                <h3 class="font-bold text-lg text-gray-800">Truffle Pasta</h3>
+                                <span class="font-bold text-gray-800">₹1110</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mt-1">Homemade fettuccine with wild mushrooms, truffle cream and parmesan</p>
+                            <div class="mt-2 flex items-center">
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="text-gray-500 text-xs ml-2">(32 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dish 3 -->
+                <div class="dish-card bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="flex">
+                        <div class="w-24 h-24 rounded-lg overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                                 alt="Salad" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start">
+                                <h3 class="font-bold text-lg text-gray-800">Superfood Salad</h3>
+                                <span class="font-bold text-gray-800">₹599</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mt-1">Kale, quinoa, avocado, berries, nuts with lemon tahini dressing</p>
+                            <div class="mt-2 flex items-center">
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="text-gray-500 text-xs ml-2">(56 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dish 4 -->
+                <div class="dish-card bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="flex">
+                        <div class="w-24 h-24 rounded-lg overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1127&q=80" 
+                                 alt="Dessert" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start">
+                                <h3 class="font-bold text-lg text-gray-800">Chocolate Lava Cake</h3>
+                                <span class="font-bold text-gray-800">₹499</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mt-1">Warm chocolate cake with molten center, served with vanilla ice cream</p>
+                            <div class="mt-2 flex items-center">
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="text-gray-500 text-xs ml-2">(72 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dish 5 -->
+                <div class="dish-card bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="flex">
+                        <div class="w-24 h-24 rounded-lg overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                                 alt="Seafood" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start">
+                                <h3 class="font-bold text-lg text-gray-800">Grilled Salmon</h3>
+                                <span class="font-bold text-gray-800">₹1399</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mt-1">Wild-caught salmon with lemon butter sauce and seasonal vegetables</p>
+                            <div class="mt-2 flex items-center">
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="text-gray-500 text-xs ml-2">(41 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dish 6 -->
+                <div class="dish-card bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="flex">
+                        <div class="w-24 h-24 rounded-lg overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                                 alt="Drink" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start">
+                                <h3 class="font-bold text-lg text-gray-800">Berry Bliss Smoothie</h3>
+                                <span class="font-bold text-gray-800">₹500</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mt-1">Mixed berries, banana, almond milk and chia seeds</p>
+                            <div class="mt-2 flex items-center">
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="text-gray-500 text-xs ml-2">(28 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="px-8 py-3 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-full font-semibold hover:shadow-lg transition">View Full Menu</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gradient-to-br from-pink-50 to-purple-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="rounded-xl overflow-hidden h-64">
+                            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" 
+                                 alt="Chef cooking" class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-xl overflow-hidden h-64">
+                            <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                                 alt="Ingredients" class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-xl overflow-hidden h-64">
+                            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                                 alt="Restaurant interior" class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-xl overflow-hidden h-64">
+                            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="Dining area" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">Our Story</h2>
+                    <p class="text-gray-600 mb-4">
+                        What began in 2010 as a tiny bistro with only ten tables, TasteBurst has evolved into a well-regarded local favorite. Our founder, Chef Marco, aimed to craft a destination where food became an immersive experience for all senses, transcending simple nutrition.                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Today, we are celebrated for our colorful dishes that showcase seasonal components and global tastes. The menu we offer presents a narrative of history, novelty, and fundamentally, zeal                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="text-red-500 text-3xl mb-2">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-800">Fresh Ingredients</h3>
+                            <p class="text-gray-600 text-sm">Sourced daily from local farms</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="text-red-500 text-3xl mb-2">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-800">Award Winning</h3>
+                            <p class="text-gray-600 text-sm">Recognized by Food & Wine Magazine</p>
+                        </div>
+                    </div>
+                    
+                    <button class="px-6 py-2 border-2 border-red-500 text-red-500 rounded-full hover:bg-red-500 hover:text-white transition">Meet Our Team</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Food Gallery</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="rounded-xl overflow-hidden h-48">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" 
+                         alt="Food" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="rounded-xl overflow-hidden h-48">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1081&q=80" 
+                         alt="Food" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="rounded-xl overflow-hidden h-48">
+                    <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1098&q=80" 
+                         alt="Food" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="rounded-xl overflow-hidden h-48">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" 
+                         alt="Food" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="rounded-xl overflow-hidden h-48">
+                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1071&q=80" 
+                         alt="Food" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="rounded-xl overflow-hidden h-48">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                         alt="Food" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="rounded-xl overflow-hidden h-48">
+                    <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1127&q=80" 
+                         alt="Food" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="rounded-xl overflow-hidden h-48">
+                    <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                         alt="Food" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="px-8 py-3 bg-white border-2 border-red-500 text-red-500 rounded-full font-semibold hover:bg-red-500 hover:text-white transition">View More Photos</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="py-16 gradient-bg text-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">What Our Guests Say</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card p-6 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Rimi D David</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "The truffle pasta was absolutely divine! The ambiance was perfect for our anniversary dinner. Will definitely be back!"
+                    </p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card p-6 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Raj Thomas</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "As a food blogger, I've eaten at hundreds of restaurants. TasteBurst stands out for their creative flavor combinations and impeccable service."
+                    </p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card p-6 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="User" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Andria Roy</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "The rainbow salad bowl is my go-to lunch! So fresh and flavorful. Love that they have so many healthy options without sacrificing taste."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact & Reservation -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">Contact Us</h2>
+                    
+                    <div class="mb-8">
+                        <div class="flex items-start mb-6">
+                            <div class="text-red-500 text-xl mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800 mb-1">Address</h3>
+                                <p class="text-gray-600">123 Flavor Street, Culinary District<br>New York, NY 10001</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="text-red-500 text-xl mr-4 mt-1">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800 mb-1">Phone</h3>
+                                <p class="text-gray-600">(212) 555-1234</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-red-500 text-xl mr-4 mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800 mb-1">Email</h3>
+                                <p class="text-gray-600">hello@tasteburst.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="font-bold text-xl text-gray-800 mb-4">Opening Hours</h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="text-gray-600">Monday - Thursday</span>
+                            <span class="font-medium">11:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="text-gray-600">Friday - Saturday</span>
+                            <span class="font-medium">11:00 AM - 11:00 PM</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Sunday</span>
+                            <span class="font-medium">10:00 AM - 9:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">Make a Reservation</h2>
+                    
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-gray-700 mb-1">Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 mb-1">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="date" class="block text-gray-700 mb-1">Date</label>
+                                <input type="date" id="date" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                            </div>
+                            <div>
+                                <label for="time" class="block text-gray-700 mb-1">Time</label>
+                                <input type="time" id="time" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="guests" class="block text-gray-700 mb-1">Number of Guests</label>
+                                <select id="guests" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 People</option>
+                                    <option value="3">3 People</option>
+                                    <option value="4">4 People</option>
+                                    <option value="5">5 People</option>
+                                    <option value="6">6 People</option>
+                                    <option value="7">7 People</option>
+                                    <option value="8">8+ People</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-gray-700 mb-1">Phone</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="special-requests" class="block text-gray-700 mb-1">Special Requests</label>
+                            <textarea id="special-requests" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full py-3 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-full font-semibold hover:shadow-lg transition">Book Table</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter -->
+    <section class="py-12 bg-gradient-to-r from-purple-100 to-pink-100">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4 text-gray-800">Join Our Foodie Community</h2>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Subscribe to our newsletter for exclusive offers, new menu announcements, and culinary inspiration.</p>
+            
+            <form class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+                <input type="email" placeholder="Your email address" class="flex-1 px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500">
+                <button type="submit" class="px-6 py-3 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-full font-semibold hover:shadow-md transition">Subscribe</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-white font-bold">TB</div>
+                        <span class="font-semibold">TasteBurst</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Where flavors come alive and every meal is a celebration.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-yelp"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#menu" class="text-gray-400 hover:text-white transition">Menu</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-white transition">Gallery</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Opening Hours</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex justify-between"><span>Mon-Thu:</span> <span>11AM-10PM</span></li>
+                        <li class="flex justify-between"><span>Fri-Sat:</span> <span>11AM-11PM</span></li>
+                        <li class="flex justify-between"><span>Sunday:</span> <span>10AM-9PM</span></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-sm"></i>
+                            <span>123 Flavor Street, NY 10001</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-sm"></i>
+                            <span>(212) 555-1234</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-sm"></i>
+                            <span>hello@tasteburst.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+                <p>&copy; 2023 TasteBurst Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    </body>
+</html>
